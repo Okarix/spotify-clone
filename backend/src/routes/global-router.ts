@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import authRouter from './auth/auth-router'
-import { uploadHandler, upload } from './upload-file'
+import { uploadHandler, upload } from '../utils/upload-file'
 
 const globalRouter = Router()
 

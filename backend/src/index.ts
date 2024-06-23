@@ -1,14 +1,11 @@
 import 'dotenv/config'
 import express from 'express'
 import { createServer } from 'node:http'
-import connectDB from './db'
+import connectDB from './utils/db'
 import globalRouter from './routes/global-router'
-import { logger } from './logger'
-import multer from 'multer'
-import { storage } from './firebase'
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
+import { logger } from './middlewares/logger'
 
-// connectDB()
+connectDB()
 
 const app = express()
 

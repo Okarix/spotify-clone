@@ -1,6 +1,6 @@
 import multer from 'multer'
 import express from 'express'
-import { storage } from '../firebase'
+import { storage } from './firebase'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 
 export const upload = multer({ storage: multer.memoryStorage() })
