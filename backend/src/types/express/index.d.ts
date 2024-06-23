@@ -6,3 +6,11 @@ declare module 'express-serve-static-core' {
     file?: File
   }
 }
+
+declare module 'express-serve-static-core' {
+  interface Request {
+    files?: {
+      [fieldname: string]: Express.Multer.File[]
+    }
+  }
+}

@@ -1,10 +1,10 @@
 import { Router } from 'express'
 import authRouter from './auth/auth-router'
-import { uploadHandler, upload } from '../utils/upload-file'
+import songRouter from './songs/songs-router'
 
 const globalRouter = Router()
 
 globalRouter.use('/auth', authRouter)
-globalRouter.post('/upload', upload.single('file'), uploadHandler)
+globalRouter.use('/songs', songRouter)
 
 export default globalRouter
